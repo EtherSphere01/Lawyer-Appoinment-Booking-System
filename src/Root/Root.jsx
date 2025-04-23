@@ -10,11 +10,11 @@ const Root = () => {
       <Suspense
         fallback={
           <div className="flex justify-center items-center h-screen">
-            Loading...
+            <span className="loading loading-bars loading-xl"></span>
           </div>
         }
       >
-        <Outlet></Outlet>
+        <Outlet />
       </Suspense>
       <Footer></Footer>
     </div>

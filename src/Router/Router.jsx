@@ -1,10 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
-import Root from "../Root/Root";
+import { createBrowserRouter } from "react-router-dom";
+import Root from "../Root/Root"; // Keep this eager
 import Error from "../Pages/Error/Error";
-import Header from "../components/Header/Header";
-import Home from "../Pages/Home/Home";
 import { lazy } from "react";
 
+const Home = lazy(() => import("../Pages/Home/Home"));
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +13,6 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "/",
         loader: () => fetch("./data/lawyer.json"),
         Component: Home,
       },
