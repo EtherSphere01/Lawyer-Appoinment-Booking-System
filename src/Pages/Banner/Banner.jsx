@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="my-10">
+    <div className="md:my-5 ">
       <div className="hero min-h-[50vh]  ">
         <img
           src="./assets/banner-img-1.png"
@@ -22,7 +22,6 @@ const Banner = () => {
               a routine checkup or urgent consultation, book appointments in
               minutes and receive quality care you can trust.
             </p>
-           
           </div>
         </div>
       </div>

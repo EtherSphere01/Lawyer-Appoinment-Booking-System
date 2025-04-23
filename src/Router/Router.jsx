@@ -3,6 +3,9 @@ import Root from "../Root/Root";
 import Error from "../Pages/Error/Error";
 import Header from "../components/Header/Header";
 import Home from "../Pages/Home/Home";
+import { lazy } from "react";
+
+
 export const router = createBrowserRouter([
   {
     path: "/",

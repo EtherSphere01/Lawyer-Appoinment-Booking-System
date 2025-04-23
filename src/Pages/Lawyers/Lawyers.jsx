@@ -7,7 +7,7 @@ const Lawyers = ({ data }) => {
   return (
     <div className="pt-5">
       <div>
-        <h1 className="text-3xl text-center pb-5">Our Best Lawyers</h1>
+        <h1 className="text-3xl text-center pb-5 font-bold">Our Best Lawyers</h1>
         <p className="text-center text-gray-500 pb-13 lg:w-3/4 mx-auto">
           Our platform connects you with verified, experienced Lawyers across
           various specialties — all at your convenience. Whether it's a routine
