@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 
 const Root = () => {
   return (
-    <div>
+    <div className="container mx-auto mulish">
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>
