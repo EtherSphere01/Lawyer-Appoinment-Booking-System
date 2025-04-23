@@ -1,2 +1,24 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight, 400);
+  font-style: normal;
+}
+
+/* Use a single class with a modifier for font weight */
+.mulish[data-weight="500"] {
+  font-weight: 500;
+}
+
+.mulish[data-weight="600"] {
+  font-weight: 600;
+}
+
+.mulish[data-weight="700"] {
+  font-weight: 700;
+}
