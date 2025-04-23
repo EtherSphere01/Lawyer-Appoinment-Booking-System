@@ -23,7 +23,7 @@ const HomeEnd = () => {
               className="h-10 w-10"
             />
             <h1 className="text-3xl font-bold">
-              <CountUp end={199} />+
+              <CountUp end={199} enableScrollSpy={true} />+
             </h1>
             <p>Total Lawyer</p>
           </div>
@@ -35,7 +35,7 @@ const HomeEnd = () => {
               className="h-10 w-10"
             />
             <h1 className="text-3xl font-bold">
-              <CountUp end={547} />+
+              <CountUp end={547} enableScrollSpy={true} />+
             </h1>
             <p>Total Reviews</p>
           </div>
@@ -47,7 +47,7 @@ const HomeEnd = () => {
               className="h-10 w-10"
             />
             <h1 className="text-3xl font-bold">
-              <CountUp end={1900} />+
+              <CountUp end={1900} enableScrollSpy={true} />+
             </h1>
             <p>Cases Initiated</p>
           </div>
@@ -59,13 +59,12 @@ const HomeEnd = () => {
               className="h-10 w-10"
             />
             <h1 className="text-3xl font-bold">
-              <CountUp end={300} />+
+              <CountUp end={300} enableScrollSpy={true} />+
             </h1>
             <p>Total Stuffs</p>
           </div>
         </div>
       </div>
-      <CountUp duration={2.75}></CountUp>
     </div>
   );
 };
