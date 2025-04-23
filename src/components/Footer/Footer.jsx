@@ -1,23 +1,60 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Footer = () => {
   const links = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold text-white underline underline-offset-4"
+              : "text-gray-300"
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to="/my-bookings">My-Bookings</Link>
+        <NavLink
+          to="/my-bookings"
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold text-white underline underline-offset-4"
+              : "text-gray-300"
+          }
+        >
+          My-Bookings
+        </NavLink>
       </li>
       <li>
-        <Link to="/blogs">Blogs</Link>
+        <NavLink
+          to="/blogs"
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold text-white underline underline-offset-4"
+              : "text-gray-300"
+          }
+        >
+          Blogs
+        </NavLink>
       </li>
       <li>
-        <Link to="/error">Contact Us</Link>
+        <NavLink
+          to="/error"
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold text-white underline underline-offset-4"
+              : "text-gray-300"
+          }
+        >
+          Contact Us
+        </NavLink>
       </li>
     </>
   );
+
   return (
     <div>
       <footer className="footer footer-horizontal footer-center bg-[#0F0F0F] text-primary-content p-10">
