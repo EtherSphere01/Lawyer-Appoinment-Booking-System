@@ -21,6 +21,6 @@ A responsive and interactive lawyer appointment booking platform built with Reac
 -> Recharts
 -> LocalStorage for state persistence
 
-![Landing Page Design](assets/landingPage.png)  
-![Filter Page](assets/LawyerDetails.png)  
-![Book Details](assets/LawyerAppointment.png)
+![Landing Page Design](/assets/landingPage.png)  
+![Filter Page](/assets/LawyerDetails.png)  
+![Book Details](/assets/LawyerAppointment.png)
