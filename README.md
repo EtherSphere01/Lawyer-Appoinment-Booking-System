@@ -1,13 +1,26 @@
-# React + Vite
+# Lawyer Appointment Booking System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Live Demo : [Click Here](https://lawyer-appointment-booking-system.vercel.app/)
 
-Currently, two official plugins are available:
+Lawyer Booking Web App 🧑‍⚖️📅
+A responsive and interactive lawyer appointment booking platform built with React. The app allows users to browse lawyers, book appointments, view current bookings, and visualize booking data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features:
+-> Browse & book appointments with verified lawyers
+-> Store bookings using localStorage
+-> Cancel appointments with real-time UI updates
+-> Success/error notifications via React Toastify
+-> Animated stats using React CountUp
+-> Visual insights with Recharts (e.g., booked vs available lawyers)
 
-## Expanding the ESLint configuration
+🔧 Tech Stack:
+-> React, React Router
+-> Tailwind CSS
+-> React Toastify
+-> React CountUp
+-> Recharts
+-> LocalStorage for state persistence
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Lawyer-Appoinment-Booking-System" 
+![Landing Page Design](assets/landingPage.png)  
+![Filter Page](assets/LawyerDetails.png)  
+![Book Details](assets/LawyerAppointment.png)

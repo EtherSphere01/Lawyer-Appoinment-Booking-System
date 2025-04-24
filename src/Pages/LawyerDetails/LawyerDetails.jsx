@@ -1,10 +1,12 @@
-import React from "react";
-import { Link, useLoaderData, useParams } from "react-router";
+import React, { use, useEffect, useState } from "react";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router";
+import { getData, setData } from "../../utilities/database";
+import { toast, ToastContainer } from "react-toastify";
 
 const LawyerDetails = () => {
   const { id } = useParams();
   const lawyer_details = useLoaderData();
-  const lawyerDetails = lawyer_details.find(
+  const single_lawyer = lawyer_details.find(
     (lawyer) => lawyer.license_number === id
   );
 
@@ -16,7 +18,24 @@ const LawyerDetails = () => {
     license_number,
     consultation_fee,
     availability,
-  } = lawyerDetails;
+  } = single_lawyer;
+
+  const [stored, setStored] = useState([]);
+  const [prev, setPrev] = useState(false);
+  const navigate = useNavigate();
+
+  const handleBooking = (lawyer) => {
+    const data = getData();
+    console.log(data);
+    const matched = data.find((item) => item === lawyer.license_number);
+    if (matched) {
+      toast.error("Already Booked");
+    } else {
+      setData(lawyer.license_number);
+      toast.success("Booked Successfully");
+      navigate("/my-bookings", { state: { bookingSuccess: true } });
+    }
+  };
 
   return (
     <div className="flex flex-col gap-5 md:my-10 my-2">
@@ -68,7 +87,7 @@ const LawyerDetails = () => {
             <div>
               <p className="flex gap-2 pt-2 flex-col md:flex-row items-center justify-center md:justify-start">
                 Availability
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-wrap md:flex-nowrap justify-center md:justify-start">
                   {availability.map((day, index) => (
                     <p
                       key={index}
@@ -113,11 +132,27 @@ const LawyerDetails = () => {
         </div>
 
         <div className="flex items-center justify-center pt-3">
-          <button className="btn hover:bg-[#0ea10627] hover:text-black bg-[#0EA106] text-white rounded-4xl px-6 py-2 w-full">
-            <Link to={"/my-bookings"}>Book Appointment Now</Link>
+          <button
+            onClick={() => handleBooking({ license_number })}
+            className="btn hover:bg-[#0ea10627] hover:text-black bg-[#0EA106] text-white rounded-4xl px-6 py-2 w-full"
+          >
+            Book Appointment Now
           </button>
         </div>
       </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };

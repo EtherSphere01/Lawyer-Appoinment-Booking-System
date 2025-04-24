@@ -20,7 +20,7 @@ const Lawyers = ({ data }) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-2 md:mx-0">
         {visibleLawyers.map((lawyer, index) => (
           <Lawyer key={index} lawyer={lawyer} />
         ))}

@@ -7,6 +7,7 @@ const Home = lazy(() => import("../Pages/Home/Home"));
 const LawyerDetails = lazy(() =>
   import("../Pages/LawyerDetails/LawyerDetails")
 );
+const MyBookings = lazy(() => import("../Pages/MyBookings/MyBookings"));
 
 export const router = createBrowserRouter([
   {
@@ -21,9 +22,14 @@ export const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "lawyerDetails/:id",
+        path: "/lawyerDetails/:id",
         loader: () => fetch("/data/lawyer.json"),
         Component: LawyerDetails,
+      },
+      {
+        path: "/my-bookings",
+        loader: () => fetch("/data/lawyer.json"),
+        Component: MyBookings,
       },
     ],
   },

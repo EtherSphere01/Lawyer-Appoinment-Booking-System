@@ -47,9 +47,15 @@ const Lawyer = ({ lawyer }) => {
             <p className="text-gray-600">License Number: {license_number}</p>
           </div>
           <div className="mt-2 ">
-            <button className="btn w-full border-1 border-gray-400 rounded-4xl text-center text-[#176AE5] bg-white hover:bg-[#1769e52d] hover:text-[#176AE5] lg:w-70 h-auto p-1">
+            {/* <button className="btn w-full border-1 border-gray-400 rounded-4xl text-center text-[#176AE5] bg-white hover:bg-[#1769e52d] hover:text-[#176AE5] lg:w-70 h-auto p-1">
               <Link to={`/lawyerDetails/${license_number}`}>View Details</Link>
-            </button>
+            </button> */}
+
+            <Link to={`/lawyerDetails/${license_number}`}>
+              <button className="btn w-full border-1 border-gray-400 rounded-4xl text-center text-[#176AE5] bg-white hover:bg-[#1769e52d] hover:text-[#176AE5] lg:w-70 h-auto p-1">
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
