@@ -37,6 +37,14 @@ const LawyerDetails = () => {
     }
   };
 
+  const [available, setAvailable] = useState(false);
+
+  useEffect(() => {
+    const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
+    const isAvailable = availability.includes(today);
+    setAvailable(isAvailable);
+  }, [availability]);
+
   return (
     <div className="flex flex-col gap-5 md:my-10 my-2">
       <div className="rounded-2xl w-full bg-gray-200 h-auto flex flex-col items-center justify-center p-8 mx-2 md:mx-0">
@@ -119,9 +127,15 @@ const LawyerDetails = () => {
 
         <div className="flex items-center justify-between border-b-1 border-dashed border-gray-300 p-3">
           <p>Availability</p>
-          <p className="bg-[#09982f2d] text-[#09982F] rounded-4xl text-center text-xs py-1 px-2">
-            Lawyer Available Today
-          </p>
+          {available ? (
+            <p className="bg-[#09982f2d] text-[#09982F] rounded-4xl w-auto text-center text-xs py-1 px-2">
+              Available Today
+            </p>
+          ) : (
+            <p className="bg-[#98090923] text-[#980909] rounded-4xl w-auto text-center text-xs py-1 px-2">
+              Not Available Today
+            </p>
+          )}
         </div>
 
         <div className="border-b-1 border-dashed border-gray-300 p-3 ">
@@ -134,7 +148,13 @@ const LawyerDetails = () => {
         <div className="flex items-center justify-center pt-3">
           <button
             onClick={() => handleBooking({ license_number })}
-            className="btn hover:bg-[#0ea10627] hover:text-black bg-[#0EA106] text-white rounded-4xl px-6 py-2 w-full"
+            disabled={!available}
+            className={`btn px-6 py-2 w-full rounded-4xl transition-all duration-300
+      ${
+        available
+          ? "bg-[#0EA106] text-white hover:bg-[#0ea10627] hover:text-black"
+          : " border-1 border-gray-300 cursor-not-allowed bg-[#98090923] text-[#980909]"
+      }`}
           >
             Book Appointment Now
           </button>

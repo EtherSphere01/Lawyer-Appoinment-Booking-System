@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const Lawyer = ({ lawyer }) => {
@@ -11,6 +11,15 @@ const Lawyer = ({ lawyer }) => {
     consultation_fee,
     availability,
   } = lawyer;
+
+  const [available, setAvailable] = useState(false);
+
+  useEffect(() => {
+    const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
+    const isAvailable = availability.includes(today);
+    setAvailable(isAvailable);
+  }, [availability]);
+
   return (
     <div>
       <div className="border-1 rounded-2xl flex flex-col lg:flex-row md:justify-around items-center lg:items-center justify-center p-3">
@@ -24,9 +33,16 @@ const Lawyer = ({ lawyer }) => {
 
         <div className="flex flex-col justify-between mt-4 lg:mt-0">
           <div className="flex items-center justify-start gap-5">
-            <p className="bg-[#09982f2d] text-[#09982F] rounded-4xl w-22 text-center text-xs p-1">
-              Available
-            </p>
+            {available ? (
+              <p className="bg-[#09982f2d] text-[#09982F] rounded-4xl w-22 text-center text-xs p-1">
+                Available
+              </p>
+            ) : (
+              <p className="bg-[#98090923] text-[#980909] rounded-4xl w-22 text-center text-xs p-1">
+                Not Available
+              </p>
+            )}
+
             <p className="bg-[#1769e52d] text-[#176AE5] rounded-4xl p-1 text-center w-30 text-xs">
               {experience} Experience
             </p>

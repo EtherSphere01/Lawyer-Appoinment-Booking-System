@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getData, removeData } from "../../utilities/database";
 import { Link, useLoaderData, useLocation, useNavigate } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
+import Rechart from "./Rechart";
 
 const MyBookings = () => {
   const [lawyers, setLawyers] = useState([]);
@@ -38,6 +39,10 @@ const MyBookings = () => {
     <div>
       {lawyers.length > 0 ? (
         <div>
+          <div className="w-full flex items-center justify-center pt-10">
+            <Rechart lawyers={lawyers}></Rechart>
+          </div>
+
           <div className="pt-5 pb-10">
             <h1 className="text-2xl md:text-3xl font-bold text-center">
               My Today's Appointment
@@ -77,9 +82,12 @@ const MyBookings = () => {
           <h1 className="text-2xl md:text-3xl font-bold">
             No Appointment Today
           </h1>
-          <button className="btn hover:bg-[#0ea10627] hover:text-black bg-[#0EA106] text-white rounded-4xl px-6 py-2 w-auto ">
-            <Link to={"/"}>Book an Appointment</Link>
-          </button>
+
+          <Link to={"/"}>
+            <button className="btn hover:bg-[#0ea10627] hover:text-black bg-[#0EA106] text-white rounded-4xl px-6 py-2 w-auto ">
+              Book an Appointment
+            </button>
+          </Link>
         </div>
       )}
 
