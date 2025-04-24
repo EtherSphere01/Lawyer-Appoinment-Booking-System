@@ -59,7 +59,7 @@ const Footer = () => {
     <div>
       <footer className="footer footer-horizontal footer-center bg-[#0F0F0F] text-primary-content p-10">
         <aside className="flex items-center ">
-          <img src="./assets/logo-footer.png" alt="" className="w-7 h-7" />
+          <img src="/assets/logo-footer.png" alt="" className="w-7 h-7" />
           <p className="font-bold text-xl">Law.BD</p>
         </aside>
         <div className="flex gap-10 list-none border-b-1 border-dashed border-gray-500 pb-5 w-full justify-center text-xs">

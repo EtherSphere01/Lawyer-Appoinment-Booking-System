@@ -86,7 +86,7 @@ const Header = () => {
           </div>
           <div className="flex items-center">
             <img
-              src="./assets/logo.png"
+              src="/assets/logo.png"
               alt=""
               className="h-7 w-7 hidden lg:block lg:mr-2"
             />

@@ -4,269 +4,269 @@
     "name": "Afsana Rahman",
     "speciality": "Immigration Law",
     "experience": "8 years",
-    "license_number": "BD 3829948",
+    "license_number": "BD-3829948",
     "consultation_fee": 3000,
-    "availability": "Sunday, Wednesday, Tuesday, Friday, Saturday"
+    "availability": ["Sunday", "Wednesday", "Tuesday", "Friday", "Saturday"]
   },
   {
     "image": "https://i.ibb.co.com/prXZf57j/hq720.jpg",
     "name": "Samiul Karim",
     "speciality": "Property Law",
     "experience": "12 years",
-    "license_number": "BD 3857466",
+    "license_number": "BD-3857466",
     "consultation_fee": 2500,
-    "availability": "Tuesday, Friday, Wednesday"
+    "availability": ["Tuesday", "Friday", "Wednesday"]
   },
   {
     "image": "https://i.ibb.co.com/ZzbHHM5D/qroDRufM.png",
     "name": "Nilufa Sultana",
     "speciality": "Intellectual Property Law",
     "experience": "9 years",
-    "license_number": "BD 3845476",
+    "license_number": "BD-3845476",
     "consultation_fee": 2000,
-    "availability": "Sunday, Wednesday, Thursday, Tuesday"
+    "availability": ["Sunday", "Wednesday", "Thursday", "Tuesday"]
   },
   {
     "image": "https://i.ibb.co.com/sdTTGjXH/successful-corporate-lawyer-in-suit-vector-39201256.jpg",
     "name": "Rezaul Haque",
     "speciality": "Intellectual Property Law",
     "experience": "4 years",
-    "license_number": "BD 3805235",
+    "license_number": "BD-3805235",
     "consultation_fee": 2000,
-    "availability": "Sunday, Tuesday, Saturday, Friday"
+    "availability": ["Sunday", "Tuesday", "Saturday", "Friday"]
   },
   {
     "image": "https://i.ibb.co.com/prXZf57j/hq720.jpg",
     "name": "Tania Ahmed",
     "speciality": "Family Law",
     "experience": "14 years",
-    "license_number": "BD 3833231",
+    "license_number": "BD-3833231",
     "consultation_fee": 2000,
-    "availability": "Friday, Saturday, Monday, Thursday, Wednesday"
+    "availability": ["Friday", "Saturday", "Monday", "Thursday", "Wednesday"]
   },
   {
     "image": "https://i.ibb.co.com/prXZf57j/hq720.jpg",
     "name": "Mehedi Hasan",
     "speciality": "Intellectual Property Law",
     "experience": "10 years",
-    "license_number": "BD 3816909",
+    "license_number": "BD-3816909",
     "consultation_fee": 3000,
-    "availability": "Thursday, Wednesday, Friday, Sunday"
+    "availability": ["Thursday", "Wednesday", "Friday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/zhMkqChL/concept-legally-accepting-terms-conditions-law-illustration-1263357-37128.jpg",
     "name": "Farzana Chowdhury",
     "speciality": "Environmental Law",
     "experience": "6 years",
-    "license_number": "BD 3817308",
+    "license_number": "BD-3817308",
     "consultation_fee": 1200,
-    "availability": "Tuesday, Wednesday, Thursday, Sunday, Friday"
+    "availability": ["Tuesday", "Wednesday", "Thursday", "Sunday", "Friday"]
   },
   {
     "image": "https://i.ibb.co.com/zhMkqChL/concept-legally-accepting-terms-conditions-law-illustration-1263357-37128.jpg",
     "name": "Nayeem Islam",
     "speciality": "Environmental Law",
     "experience": "10 years",
-    "license_number": "BD 3863532",
+    "license_number": "BD-3863532",
     "consultation_fee": 3000,
-    "availability": "Saturday, Friday, Monday, Thursday, Sunday"
+    "availability": ["Saturday", "Friday", "Monday", "Thursday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/prXZf57j/hq720.jpg",
     "name": "Sharmin Akter",
     "speciality": "Intellectual Property Law",
     "experience": "12 years",
-    "license_number": "BD 3844060",
+    "license_number": "BD-3844060",
     "consultation_fee": 1800,
-    "availability": "Wednesday, Monday, Sunday"
+    "availability": ["Wednesday", "Monday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/prXZf57j/hq720.jpg",
     "name": "Fahim Reza",
     "speciality": "Civil Rights Law",
     "experience": "4 years",
-    "license_number": "BD 3833203",
+    "license_number": "BD-3833203",
     "consultation_fee": 1200,
-    "availability": "Sunday, Friday, Thursday, Tuesday"
+    "availability": ["Sunday", "Friday", "Thursday", "Tuesday"]
   },
   {
     "image": "https://i.ibb.co.com/gbj666Vn/pngtree-legal-advice-online-lawyer-law-png-image-8768157.png",
     "name": "Lubaba Sayeed",
     "speciality": "Family Law",
     "experience": "4 years",
-    "license_number": "BD 3894638",
+    "license_number": "BD-3894638",
     "consultation_fee": 2500,
-    "availability": "Friday, Thursday, Sunday"
+    "availability": ["Friday", "Thursday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/prXZf57j/hq720.jpg",
     "name": "Mahmudul Hasan",
     "speciality": "Criminal Law",
     "experience": "15 years",
-    "license_number": "BD 3886897",
+    "license_number": "BD-3886897",
     "consultation_fee": 2000,
-    "availability": "Wednesday, Monday, Saturday, Friday"
+    "availability": ["Wednesday", "Monday", "Saturday", "Friday"]
   },
   {
     "image": "https://i.ibb.co.com/B5kzYDPR/choosing-career-types-of-lawyers.jpg",
     "name": "Rifat Noman",
     "speciality": "Criminal Law",
     "experience": "14 years",
-    "license_number": "BD 3886033",
+    "license_number": "BD-3886033",
     "consultation_fee": 3000,
-    "availability": "Friday, Saturday, Wednesday, Thursday, Monday"
+    "availability": ["Friday", "Saturday", "Wednesday", "Thursday", "Monday"]
   },
   {
     "image": "https://i.ibb.co.com/zhMkqChL/concept-legally-accepting-terms-conditions-law-illustration-1263357-37128.jpg",
     "name": "Nusrat Jahan",
     "speciality": "Criminal Law",
     "experience": "3 years",
-    "license_number": "BD 3830641",
+    "license_number": "BD-3830641",
     "consultation_fee": 3000,
-    "availability": "Tuesday, Friday, Thursday"
+    "availability": ["Tuesday", "Friday", "Thursday"]
   },
   {
     "image": "https://i.ibb.co.com/ZzbHHM5D/qroDRufM.png",
     "name": "Zahid Khan",
     "speciality": "Civil Rights Law",
     "experience": "11 years",
-    "license_number": "BD 3896114",
+    "license_number": "BD-3896114",
     "consultation_fee": 1500,
-    "availability": "Wednesday, Tuesday, Saturday, Thursday, Sunday"
+    "availability": ["Wednesday", "Tuesday", "Saturday", "Thursday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/sdTTGjXH/successful-corporate-lawyer-in-suit-vector-39201256.jpg",
     "name": "Tanvir Alam",
     "speciality": "Employment Law",
     "experience": "14 years",
-    "license_number": "BD 3828818",
+    "license_number": "BD-3828818",
     "consultation_fee": 3000,
-    "availability": "Wednesday, Monday, Thursday, Saturday, Tuesday"
+    "availability": ["Wednesday", "Monday", "Thursday", "Saturday", "Tuesday"]
   },
   {
     "image": "https://i.ibb.co.com/ZzbHHM5D/qroDRufM.png",
     "name": "Fariha Hossain",
     "speciality": "Property Law",
     "experience": "4 years",
-    "license_number": "BD 3854187",
+    "license_number": "BD-3854187",
     "consultation_fee": 3000,
-    "availability": "Tuesday, Saturday, Wednesday, Friday, Sunday"
+    "availability": ["Tuesday", "Saturday", "Wednesday", "Friday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/ZzbHHM5D/qroDRufM.png",
     "name": "Omar Faruk",
     "speciality": "Immigration Law",
     "experience": "4 years",
-    "license_number": "BD 3852789",
+    "license_number": "BD-3852789",
     "consultation_fee": 2500,
-    "availability": "Sunday, Thursday, Tuesday, Saturday"
+    "availability": ["Sunday", "Thursday", "Tuesday", "Saturday"]
   },
   {
     "image": "https://i.ibb.co.com/gbj666Vn/pngtree-legal-advice-online-lawyer-law-png-image-8768157.png",
     "name": "Sumaiya Nasrin",
     "speciality": "Environmental Law",
     "experience": "6 years",
-    "license_number": "BD 3873250",
+    "license_number": "BD-3873250",
     "consultation_fee": 2500,
-    "availability": "Thursday, Saturday, Friday, Tuesday"
+    "availability": ["Thursday", "Saturday", "Friday", "Tuesday"]
   },
   {
     "image": "https://i.ibb.co.com/prXZf57j/hq720.jpg",
     "name": "Habibur Rahman",
     "speciality": "Corporate Law",
     "experience": "9 years",
-    "license_number": "BD 3860188",
+    "license_number": "BD-3860188",
     "consultation_fee": 3000,
-    "availability": "Friday, Wednesday, Tuesday, Sunday"
+    "availability": ["Friday", "Wednesday", "Tuesday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/sdTTGjXH/successful-corporate-lawyer-in-suit-vector-39201256.jpg",
     "name": "Sadia Karim",
     "speciality": "Intellectual Property Law",
     "experience": "5 years",
-    "license_number": "BD 3852909",
+    "license_number": "BD-3852909",
     "consultation_fee": 1500,
-    "availability": "Friday, Saturday, Thursday"
+    "availability": ["Friday", "Saturday", "Thursday"]
   },
   {
     "image": "https://i.ibb.co.com/gbj666Vn/pngtree-legal-advice-online-lawyer-law-png-image-8768157.png",
     "name": "Nasir Uddin",
     "speciality": "Immigration Law",
     "experience": "4 years",
-    "license_number": "BD 3823335",
+    "license_number": "BD-3823335",
     "consultation_fee": 1800,
-    "availability": "Wednesday, Monday, Friday, Saturday, Tuesday"
+    "availability": ["Wednesday", "Monday", "Friday", "Saturday", "Tuesday"]
   },
   {
     "image": "https://i.ibb.co.com/zhMkqChL/concept-legally-accepting-terms-conditions-law-illustration-1263357-37128.jpg",
     "name": "Lamia Sultana",
     "speciality": "Civil Rights Law",
     "experience": "9 years",
-    "license_number": "BD 3822928",
+    "license_number": "BD-3822928",
     "consultation_fee": 1200,
-    "availability": "Wednesday, Friday, Sunday"
+    "availability": ["Wednesday", "Friday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/B5kzYDPR/choosing-career-types-of-lawyers.jpg",
     "name": "Imran Hossain",
     "speciality": "Corporate Law",
     "experience": "6 years",
-    "license_number": "BD 3899081",
+    "license_number": "BD-3899081",
     "consultation_fee": 1800,
-    "availability": "Saturday, Sunday, Wednesday, Friday"
+    "availability": ["Saturday", "Sunday", "Wednesday", "Friday"]
   },
   {
     "image": "https://i.ibb.co.com/zhMkqChL/concept-legally-accepting-terms-conditions-law-illustration-1263357-37128.jpg",
     "name": "Jannat Ara",
     "speciality": "Employment Law",
     "experience": "13 years",
-    "license_number": "BD 3802901",
+    "license_number": "BD-3802901",
     "consultation_fee": 3000,
-    "availability": "Friday, Thursday, Saturday"
+    "availability": ["Friday", "Thursday", "Saturday"]
   },
   {
     "image": "https://i.ibb.co.com/ZzbHHM5D/qroDRufM.png",
     "name": "Shohag Miah",
     "speciality": "Criminal Law",
     "experience": "12 years",
-    "license_number": "BD 3816788",
+    "license_number": "BD-3816788",
     "consultation_fee": 1800,
-    "availability": "Saturday, Wednesday, Tuesday, Sunday"
+    "availability": ["Saturday", "Wednesday", "Tuesday", "Sunday"]
   },
   {
     "image": "https://i.ibb.co.com/gbj666Vn/pngtree-legal-advice-online-lawyer-law-png-image-8768157.png",
     "name": "Jui Rani",
     "speciality": "Criminal Law",
     "experience": "7 years",
-    "license_number": "BD 3848883",
+    "license_number": "BD-3848883",
     "consultation_fee": 1200,
-    "availability": "Wednesday, Sunday, Tuesday"
+    "availability": ["Wednesday", "Sunday", "Tuesday"]
   },
   {
     "image": "https://i.ibb.co.com/ZzbHHM5D/qroDRufM.png",
     "name": "Ashraful Islam",
     "speciality": "Civil Rights Law",
     "experience": "4 years",
-    "license_number": "BD 3878608",
+    "license_number": "BD-3878608",
     "consultation_fee": 1800,
-    "availability": "Saturday, Monday, Friday"
+    "availability": ["Saturday", "Monday", "Friday"]
   },
   {
     "image": "https://i.ibb.co.com/B5kzYDPR/choosing-career-types-of-lawyers.jpg",
     "name": "Tahmina Akter",
     "speciality": "Property Law",
     "experience": "15 years",
-    "license_number": "BD 3864800",
+    "license_number": "BD-3864800",
     "consultation_fee": 2500,
-    "availability": "Tuesday, Friday, Monday"
+    "availability": ["Tuesday", "Friday", "Monday"]
   },
   {
     "image": "https://i.ibb.co.com/zhMkqChL/concept-legally-accepting-terms-conditions-law-illustration-1263357-37128.jpg",
     "name": "Rayhan Kabir",
     "speciality": "Immigration Law",
     "experience": "3 years",
-    "license_number": "BD 3899761",
+    "license_number": "BD-3899761",
     "consultation_fee": 3000,
-    "availability": "Sunday, Saturday, Monday"
+    "availability": ["Sunday", "Saturday", "Monday"]
   }
 ]
