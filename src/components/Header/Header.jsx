@@ -1,7 +1,20 @@
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React from "react";
 import { Link, NavLink } from "react-router";
+import { auth } from "../../Firebase/firebase.init";
 
 const Header = () => {
+  const provider = new GoogleAuthProvider();
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const links = (
     <>
       <li>
@@ -98,9 +111,9 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
+        <div onClick={() => handleGoogleSignIn()} className="navbar-end">
           <a className="btn  bg-[#0EA106] text-white rounded-4xl font-light">
-            Contact Now
+            Sign In
           </a>
         </div>
       </div>
