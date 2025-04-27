@@ -1,6 +1,6 @@
 # Lawyer Appointment Booking System
 
-# Live Demo : [Click Here](https://lawyer-appointment-booking-system.vercel.app/)
+# Live Demo : [Click Here](https://lawyer-appointment25.netlify.app/)
 
 Lawyer Booking Web App 🧑‍⚖️📅
 A responsive and interactive lawyer appointment booking platform built with React. The app allows users to browse lawyers, book appointments, view current bookings, and visualize booking data.
