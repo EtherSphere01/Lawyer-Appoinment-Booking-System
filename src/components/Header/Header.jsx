@@ -4,17 +4,6 @@ import { Link, NavLink } from "react-router";
 import { auth } from "../../Firebase/firebase.init";
 
 const Header = () => {
-  const provider = new GoogleAuthProvider();
-  const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   const links = (
     <>
       <li>
@@ -55,7 +44,7 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          to="/error"
+          to="/contact-us"
           className={({ isActive }) =>
             isActive
               ? "font-bold text-black underline underline-offset-4"
@@ -111,10 +100,13 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div onClick={() => handleGoogleSignIn()} className="navbar-end">
-          <a className="btn  bg-[#0EA106] text-white rounded-4xl font-light">
+        <div className="navbar-end">
+          <NavLink
+            to="/sign-in"
+            className="btn  bg-[#0EA106] text-white rounded-4xl font-light"
+          >
             Sign In
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>

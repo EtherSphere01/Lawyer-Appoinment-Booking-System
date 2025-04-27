@@ -31,6 +31,22 @@ export const router = createBrowserRouter([
         loader: () => fetch("/data/lawyer.json"),
         Component: MyBookings,
       },
+      {
+        path: "/sign-in",
+        Component: lazy(() => import("../Credential/SignIn/SignIn")),
+      },
+      {
+        path: "/sign-up",
+        Component: lazy(() => import("../Credential/SignUp/SignUp")),
+      },
+      {
+        path: "/blogs",
+        Component: lazy(() => import("../Credential/SignIn/SignIn")),
+      },
+      {
+        path: "/contact-us",
+        Component: lazy(() => import("../Credential/SignUp/SignUp")),
+      },
     ],
   },
 ]);
