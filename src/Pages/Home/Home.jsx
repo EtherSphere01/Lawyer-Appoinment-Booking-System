@@ -1,4 +1,4 @@
-import React, { use, useEffect } from "react";
+import React, { use, useEffect, useState } from "react";
 import Banner from "../Banner/Banner";
 import Lawyers from "../Lawyers/Lawyers";
 import { useLoaderData, useLocation, useNavigate } from "react-router";
@@ -12,9 +12,11 @@ const Home = () => {
 
   useEffect(() => {
     if (location?.state?.loginSuccessful) {
+      window.location.reload();
       toast.success("Welcome to Law.BD!");
       navigate(location.pathname, { replace: true });
     } else if (location?.state?.google) {
+      window.location.reload();
       toast.success("Google Sign In Successful!");
       navigate(location.pathname, { replace: true });
     }

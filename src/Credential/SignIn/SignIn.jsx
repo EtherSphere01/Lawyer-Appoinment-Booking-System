@@ -4,6 +4,8 @@ import { auth } from "../../Firebase/firebase.init";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { toast, ToastContainer } from "react-toastify";
 import { sendPasswordResetEmail } from "firebase/auth";
+import { getUserByEmail, setCurrentUser } from "../../utilities/firebaseDB";
+import { em } from "framer-motion/client";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -18,27 +20,39 @@ const SignIn = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         if (!user.emailVerified) {
+          toast.dismiss();
           toast.error("Please verify your email address.");
           return;
         }
+
+        const signInUser = getUserByEmail(user.email);
+        const userData = {
+          name: signInUser.name,
+          email: signInUser.email,
+          photoURL: signInUser.photoURL,
+        };
+        setCurrentUser(userData);
         navigate("/", { state: { loginSuccessful: true } });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.error(errorMessage);
-        toast.error(`Sign In Failed: ${errorMessage}`);
+        toast.dismiss();
+        toast.error(`Sign In Failed`);
       });
   };
 
   const handleForgetPassword = () => {
     const email = emailref.current.value;
     if (!email) {
+      toast.dismiss();
       toast.error("Please enter your email address.");
       return;
     }
     sendPasswordResetEmail(auth, email)
       .then(() => {
+        toast.dismiss();
         toast.success("Password reset email sent!");
       })
       .catch((error) => {
@@ -52,6 +66,7 @@ const SignIn = () => {
 
   useEffect(() => {
     if (location?.state?.emailVerified) {
+      toast.dismiss();
       toast.success("Sign Up Successful!");
       toast.info("Please verify your email address.");
       toast.info("Email verification sent!");

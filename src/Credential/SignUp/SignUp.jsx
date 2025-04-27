@@ -8,9 +8,11 @@ import { NavLink, useNavigate } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
 import { auth } from "../../Firebase/firebase.init";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { firebaseSet, setCurrentUser } from "../../utilities/firebaseDB";
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const userStore = useNavigate();
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -18,17 +20,25 @@ const SignUp = () => {
     const lastName = form.lastName.value;
     const email = form.email.value;
     const password = form.password.value;
+    const file = "/assets/user.png";
 
     if (password.length < 6) {
       toast.error("Password must be at least 6 characters long.");
       return;
     }
+
+    const userData = {
+      name: firstName + " " + lastName,
+      email: email,
+      photoURL: file,
+    };
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
 
         sendEmailVerification(auth.currentUser)
           .then(() => {
+            firebaseSet(userData);
             navigate("/sign-in", { state: { emailVerified: true } });
           })
           .catch((error) => {
@@ -47,12 +57,17 @@ const SignUp = () => {
     provider.addScope("email");
 
     signInWithPopup(auth, provider)
-      .then(async (result) => {
+      .then((result) => {
         let user = result.user;
-        await user.reload();
-        user = auth.currentUser;
 
         if (user.email) {
+          const userData = {
+            name: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+          };
+          firebaseSet(userData);
+          setCurrentUser(userData);
           navigate("/", { state: { google: true } });
         } else {
           toast.error("No email found in Google account!");
