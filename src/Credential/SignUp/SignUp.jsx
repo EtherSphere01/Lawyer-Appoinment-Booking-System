@@ -66,7 +66,7 @@ const SignUp = () => {
             email: user.email,
             photoURL: user.photoURL,
           };
-          firebaseSet(userData);
+          
           setCurrentUser(userData);
           navigate("/", { state: { google: true } });
         } else {

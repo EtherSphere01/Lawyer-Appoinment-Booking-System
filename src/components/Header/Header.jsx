@@ -148,7 +148,7 @@ const Header = () => {
           {users && (
             <div className="gap-2 flex items-center text-bold">
               <div>
-                <p>{users.displayName}</p>{" "}
+                <p>{users.name}</p>
                 {/* users.displayName instead of users?.name */}
               </div>
               <div className="dropdown dropdown-end">
