@@ -6,21 +6,7 @@ import { getCurrentUser, removeCurrentUser } from "../../utilities/firebaseDB";
 import { toast, ToastContainer } from "react-toastify";
 
 const Header = () => {
-  const [users, setUsers] = useState(null);
-
-  // Listen for changes in the authentication state
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUsers(user); // If the user is logged in, update the state with user data
-      } else {
-        setUsers(null); // If no user is logged in, set the state to null
-      }
-    });
-
-    // Cleanup the subscription when the component is unmounted
-    return () => unsubscribe();
-  }, []);
+  const [users, setUsers] = useState(getCurrentUser());
 
   const handleSignOut = () => {
     signOut(auth)

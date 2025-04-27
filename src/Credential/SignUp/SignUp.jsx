@@ -20,7 +20,7 @@ const SignUp = () => {
     const lastName = form.lastName.value;
     const email = form.email.value;
     const password = form.password.value;
-    const file = "/assets/user.png";
+    const file = "";
 
     if (password.length < 6) {
       toast.error("Password must be at least 6 characters long.");
@@ -66,9 +66,9 @@ const SignUp = () => {
             email: user.email,
             photoURL: user.photoURL,
           };
-          
           setCurrentUser(userData);
-          navigate("/", { state: { google: true } });
+          navigate("/");
+          window.location.reload();
         } else {
           toast.error("No email found in Google account!");
         }

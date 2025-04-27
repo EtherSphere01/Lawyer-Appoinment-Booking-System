@@ -33,7 +33,8 @@ const SignIn = () => {
           photoURL: signInUser.photoURL,
         };
         setCurrentUser(userData);
-        navigate("/", { state: { loginSuccessful: true } });
+        window.location.reload();
+        navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -59,7 +60,6 @@ const SignIn = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.error(errorMessage);
       });
   };
 
@@ -71,7 +71,6 @@ const SignIn = () => {
       toast.success("Sign Up Successful!");
       toast.info("Please verify your email address.");
       toast.info("Email verification sent!");
-      navigate(location.pathname, { replace: true });
     }
   }, [location.state]);
 
