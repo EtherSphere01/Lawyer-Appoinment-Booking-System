@@ -3,14 +3,17 @@ import {
   sendEmailVerification,
   signInWithPopup,
 } from "firebase/auth";
-import React from "react";
+import React, { use } from "react";
 import { NavLink, useNavigate } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
 import { auth } from "../../Firebase/firebase.init";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { firebaseSet, setCurrentUser } from "../../utilities/firebaseDB";
+import { AuthContext } from "../../AuthContext/AuthContext";
 
 const SignUp = () => {
+  const { createUser, signInWithGoogle } = use(AuthContext);
+
   const navigate = useNavigate();
   const userStore = useNavigate();
   const handleFormSubmit = (event) => {
@@ -32,7 +35,7 @@ const SignUp = () => {
       email: email,
       photoURL: file,
     };
-    createUserWithEmailAndPassword(auth, email, password)
+    createUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
 
@@ -53,10 +56,7 @@ const SignUp = () => {
   };
 
   const handleGoogleSignIn = () => {
-    const provider = new GoogleAuthProvider();
-    provider.addScope("email");
-
-    signInWithPopup(auth, provider)
+    signInWithGoogle()
       .then((result) => {
         let user = result.user;
 
@@ -68,7 +68,6 @@ const SignUp = () => {
           };
           setCurrentUser(userData);
           navigate("/");
-          window.location.reload();
         } else {
           toast.error("No email found in Google account!");
         }

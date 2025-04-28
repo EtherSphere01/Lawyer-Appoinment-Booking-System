@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { use, useEffect, useRef } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom"; // Added useNavigate for redirecting
 import { auth } from "../../Firebase/firebase.init";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -6,8 +6,11 @@ import { toast, ToastContainer } from "react-toastify";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { getUserByEmail, setCurrentUser } from "../../utilities/firebaseDB";
 import { em } from "framer-motion/client";
+import { AuthContext } from "../../AuthContext/AuthContext";
 
 const SignIn = () => {
+  const { signInUser } = use(AuthContext);
+
   const navigate = useNavigate();
   const emailref = useRef(null);
   const handleFormSubmit = (event) => {
@@ -17,7 +20,7 @@ const SignIn = () => {
     const password = form.password.value;
     const name = form.name.value;
 
-    signInWithEmailAndPassword(auth, email, password)
+    signInUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         if (!user.emailVerified) {
@@ -26,14 +29,13 @@ const SignIn = () => {
           return;
         }
 
-        const signInUser = getUserByEmail(user.email);
+        const signInUserData = getUserByEmail(user.email);
         const userData = {
-          name: signInUser.name,
-          email: signInUser.email,
-          photoURL: signInUser.photoURL,
+          name: signInUserData.name,
+          email: signInUserData.email,
+          photoURL: signInUserData.photoURL,
         };
         setCurrentUser(userData);
-        window.location.reload();
         navigate("/");
       })
       .catch((error) => {

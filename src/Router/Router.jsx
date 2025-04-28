@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root/Root"; // Keep this eager
 import Error from "../Pages/Error/Error";
 import { lazy } from "react";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Blogs from "../Pages/Blogs/Blogs";
 
 const Home = lazy(() => import("../Pages/Home/Home"));
 const LawyerDetails = lazy(() =>
@@ -41,7 +43,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/blogs",
-        Component: lazy(() => import("../Credential/SignIn/SignIn")),
+        element: (
+          <PrivateRoute>
+            <Blogs></Blogs>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/contact-us",

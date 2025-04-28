@@ -1,21 +1,24 @@
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { auth } from "../../Firebase/firebase.init";
 import { getCurrentUser, removeCurrentUser } from "../../utilities/firebaseDB";
 import { toast, ToastContainer } from "react-toastify";
+import { AuthContext } from "../../AuthContext/AuthContext";
 
 const Header = () => {
   const [users, setUsers] = useState(getCurrentUser());
+
+  const { user } = use(AuthContext);
+  // console.log(user);
 
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
         toast.dismiss();
         toast.success("Sign Out Successful!");
-        setUsers(null); // Set users to null after sign-out
+        setUsers(null);
         removeCurrentUser();
-        window.location.reload(); // Remove user from local storage or wherever it's stored
       })
       .catch((error) => {
         toast.error("Sign Out Failed!");
@@ -121,7 +124,7 @@ const Header = () => {
 
         <div className="navbar-end">
           {/* Show Sign In button if user is not logged in */}
-          {!users && (
+          {!user && (
             <NavLink
               to="/sign-in"
               className="btn bg-[#0EA106] text-white rounded-4xl font-light"
@@ -131,7 +134,7 @@ const Header = () => {
           )}
 
           {/* Show user info and dropdown if user is logged in */}
-          {users && (
+          {user && (
             <div className="gap-2 flex items-center text-bold">
               <div>
                 <p>{users.name}</p>
